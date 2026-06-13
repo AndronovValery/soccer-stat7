@@ -1,5 +1,6 @@
 <template>
  <div>
+  <v-btn prepend-icon="$vuetify" stacked>Моя кнопка</v-btn>
   <input v-model="search" placeholder="Поиск лиги" />
   <div v-if="loading">Загрузка...</div>
   <div v-else-if="error">Ошибка</div>
@@ -36,7 +37,7 @@ const filteredParticipants = computed(() =>
 
 const goToLeague = (id) => {
   console.log(id);
-  router.push(`/league/${id}`) // Переходим на маршрут /league/:id
+  router.push(`/match/${id}`) // Переходим на маршрут /Match/:id
 }
 
 const fetchParticipants = async () => {
